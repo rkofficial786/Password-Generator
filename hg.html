@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+       
+        input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #999;
+  border-radius: 4px;
+  outline: none;
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type=checkbox]:checked:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 10px;
+  height: 18px;
+  border: 3px solid #007bff; /* Change this to the desired color */
+  border-top: none;
+  border-right: none;
+  transform: rotate(45deg);
+}
+
+      }
+    </style>
+  </head>
+  <body>
+    <label>
+      <input type="checkbox" name="checkbox"> Checkbox
+    </label>
+  </body>
+</html>
