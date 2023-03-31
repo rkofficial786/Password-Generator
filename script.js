@@ -31,6 +31,7 @@ function setglow(color){
 
 }
 
+//function to generate a random integer between two numbers
 function getRandInt(min,max){
     return Math.floor(Math.random()*(max-min)) +min ;
 }
@@ -54,6 +55,7 @@ function getSymbol(){
   return symbolString.charAt(random) ;
 }
 
+//to measure the strngth of password
 function setStrength(){
     let hasUpper= false
     let hasLower= false
@@ -98,17 +100,20 @@ function setStrength(){
 
   }
 
-
+//to make the slider value store in passlength
   slider.addEventListener('input' , (e)=>{
     password_length = e.target.value;
     handle_slider()
   })
 
+  //to active the copy button
   copy.addEventListener('click' , ()=>{
     if(input.value){
     copyContent()
     }
   })
+
+  //if there is any change in checkox this function will count from 0
 
   function handlecheckbox(){
     checkcount=0 ;
@@ -130,11 +135,12 @@ checkbox.forEach((check)=>{
     check.addEventListener('change' ,handlecheckbox)
 })
 
+//password geneartor button function to gather all random element 
 btn.addEventListener('click' , ()=>{
     if(checkcount=0) return ;
   if(password_length<checkcount){
-    password_length=checkcount
-    handle_slider()
+    password_length=checkcount;
+    handle_slider();
   }
 
   password="";
